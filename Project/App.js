@@ -15,17 +15,19 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import SafeAreaView from 'react-native-safe-area-view';
+import { store } from './store/store';
+import { Provider } from 'react-redux';
 
 import Home from './Components/Home';
 
 const App = () => {
   return (
-    <View style={styles.backgroundStyle}>
-      {/* <StatusBar backgroundColor='transparent' /> */}
-      <Home />
-    </View>
+    <Provider store={store}>
+      <View style={styles.backgroundStyle}>
+        {/* <StatusBar backgroundColor='transparent' /> */}
+        <Home />
+      </View>
+    </Provider>
   );
 };
 

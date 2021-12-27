@@ -70,6 +70,9 @@ export const feedData = [
     articleDetails:
       'I’ve been facing a few possibble symptoms of skin cancer. I’ve googled the possibilities but i thought i’d ask the community inste...See More',
     location: 'Peninsula Park, Andheri, Mumbai',
+    likesCount: 20,
+    commentsCount: 5,
+    selfLiked: false,
   },
   {
     id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
@@ -83,6 +86,9 @@ export const feedData = [
     articleDetails:
       'My husband has his 3 days transplant assessment in Newcastle next month, strange mix of emotions. For those that have been through this how long did it take following assessment was it until you were t... See More',
     location: 'Peninsula Park, Andheri, Mumbai',
+    likesCount: 20,
+    commentsCount: 5,
+    selfLiked: false,
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
@@ -95,10 +101,13 @@ export const feedData = [
     articleTitle: 'Cancer meet at Rajeev Gandhi National Park',
     articleDetails: '',
     location: '',
+    likesCount: 20,
+    commentsCount: 5,
+    selfLiked: false,
   },
   {},
   {
-    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    id: '58694a0f-3da1-471f-bd96-145571e29d73',
     category: 'LIFESTYLE',
     time: '1min',
     profilePicture: require('../assets/images/member.png'),
@@ -108,9 +117,12 @@ export const feedData = [
     articleTitle: 'Cancer meet at Rajeev Gandhi National Park',
     articleDetails: '',
     location: '',
+    likesCount: 20,
+    commentsCount: 5,
+    selfLiked: false,
   },
   {
-    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    id: '58694a0f-3da1-471f-bd96-145571e29d74',
     category: 'LIFESTYLE',
     time: '1min',
     profilePicture: require('../assets/images/greenMember.png'),
@@ -123,9 +135,12 @@ export const feedData = [
     articleTitle: 'Something to motivate you',
     articleDetails: '',
     location: 'Peninsula Park, Andheri, Mumbai',
+    likesCount: 20,
+    commentsCount: 5,
+    selfLiked: false,
   },
   {
-    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    id: '58694a0f-3da1-471f-bd96-145571e29d75',
     category: 'DIET',
     time: '1min',
     profilePicture: require('../assets/images/member.png'),
@@ -146,5 +161,8 @@ export const feedData = [
     ],
     pollCount: 204,
     location: 'Peninsula Park, Andheri, Mumbai',
+    likesCount: 20,
+    commentsCount: 5,
+    selfLiked: false,
   },
 ];

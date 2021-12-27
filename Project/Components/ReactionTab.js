@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { heightPixel, widthPixel } from './responsive';
 import { reactionData } from './sampleData';
 
-const ReactionTab = ({ hideTab }) => {
+const ReactionTab = ({ feedData, hideTab, updateFeed }) => {
   return (
     <>
       <View style={styles.tabStyle}>
@@ -13,6 +13,9 @@ const ReactionTab = ({ hideTab }) => {
             <TouchableOpacity
               onPress={() => {
                 hideTab();
+                if (item.title === 'Like') {
+                  updateFeed(feedData);
+                }
               }}
             >
               <View style={{ flexDirection: 'row' }}>

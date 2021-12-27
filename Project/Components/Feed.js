@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { increment } from '../redux/likeCounterSlice';
 import ArticleBottom from './ArticleBottom';
 import MemberPictures from './MemberPictures';
 import ReactionTab from './ReactionTab';
 import { heightPixel, widthPixel } from './responsive';
+import { useSelector, useDispatch } from 'react-redux';
 
-const Feed = ({ data, onClickShare, onClickOptions }) => {
+const Feed = ({ data, onClickShare, onClickOptions, feedUpdated }) => {
+  const count = useSelector((state) => state.likesCounter.likeCount);
+  console.log(count);
+  const dispatch = useDispatch();
   const [reactionTabVisible, setReactionTabVisible] = useState(false);
   const likePressed = () => {
+    dispatch(increment());
     setReactionTabVisible(!reactionTabVisible);
   };
 
@@ -19,6 +25,10 @@ const Feed = ({ data, onClickShare, onClickOptions }) => {
             hideTab={() => {
               likePressed();
             }}
+            updateFeed={(data) => {
+              feedUpdated(data);
+            }}
+            feedData={data}
           />
         )}
         <View style={styles.topHead}>
@@ -130,8 +140,9 @@ const Feed = ({ data, onClickShare, onClickOptions }) => {
           likePressed={() => {
             likePressed();
           }}
-          likesCount={24}
-          commentsCount={24}
+          selfLiked={data.selfLiked}
+          likesCount={data.likesCount}
+          commentsCount={data.commentsCount}
           onClickShare={() => {
             onClickShare();
           }}

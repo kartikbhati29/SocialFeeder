@@ -7,6 +7,7 @@ const ArticleBottom = ({
   likesCount,
   commentsCount,
   onClickShare,
+  selfLiked,
 }) => {
   return (
     <>
@@ -18,7 +19,11 @@ const ArticleBottom = ({
         >
           <View style={styles.articleBottomCount}>
             <Image
-              source={require('../assets/images/like.png')}
+              source={
+                selfLiked
+                  ? require('../assets/images/thumbsUp.png')
+                  : require('../assets/images/like.png')
+              }
               style={{
                 width: widthPixel(14),
                 height: heightPixel(14),

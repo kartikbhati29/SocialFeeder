@@ -14,11 +14,13 @@ import NewPost from './NewPost';
 const Home = () => {
   const offset = useRef(new Animated.Value(0)).current;
 
+  const [feedsData, setFeedsData] = useState(feedData);
   const [showShareModal, setShowShareModal] = useState(false);
   const [showOptionsModal, setShowOptionsModal] = useState(false);
   const [newPost, setNewPost] = useState(false);
 
   const onClickShare = () => {
+    a;
     setShowShareModal(!showShareModal);
   };
 
@@ -28,6 +30,25 @@ const Home = () => {
 
   const onClickOptions = () => {
     setShowOptionsModal(!showOptionsModal);
+  };
+
+  const updateFeed = (data) => {
+    console.log('update feed called', data);
+    var newData = feedsData.map((item) => {
+      if (item.id === data.id) {
+        return {
+          ...item,
+          selfLiked: !item.selfLiked,
+          likesCount: item.selfLiked
+            ? item.likesCount - 1
+            : item.likesCount + 1,
+        };
+      } else {
+        return item;
+      }
+    });
+    console.log(newData);
+    setFeedsData(newData);
   };
 
   return (
@@ -67,7 +88,7 @@ const Home = () => {
         scrollEventThrottle={16}
         bounces={false}
       >
-        {feedData.map((item, index) => {
+        {feedsData.map((item, index) => {
           if (index === 3) {
             return <LatestArticles />;
           } else {
@@ -79,6 +100,9 @@ const Home = () => {
                 }}
                 onClickOptions={() => {
                   onClickOptions();
+                }}
+                feedUpdated={(data) => {
+                  updateFeed(data);
                 }}
               />
             );
