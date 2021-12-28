@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
     paddingVertical: heightPixel(24),
   },
   shareText: {
-    fontFamily: 'Inter',
+    fontFamily: 'Proxima Nova',
     fontSize: heightPixel(14),
     lineHeight: heightPixel(21),
     fontWeight: '400',

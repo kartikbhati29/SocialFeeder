@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     marginTop: heightPixel(20),
   },
   shareText: {
-    fontFamily: 'Inter',
+    fontFamily: 'Proxima Nova',
     fontSize: heightPixel(14),
     lineHeight: heightPixel(21),
     fontWeight: '400',

@@ -236,7 +236,7 @@ const styles = StyleSheet.create({
   },
   locationText: {
     marginLeft: widthPixel(8),
-    fontFamily: 'Inter',
+    fontFamily: 'Proxima Nova',
     fontWeight: '400',
     fontSize: heightPixel(10),
     lineHeight: heightPixel(12),
@@ -286,7 +286,7 @@ const styles = StyleSheet.create({
     // flexDirection: 'row',
   },
   percentageStyle: {
-    fontFamily: 'Inter',
+    fontFamily: 'Proxima Nova',
     fontWeight: '400',
     fontSize: heightPixel(12),
     lineHeight: heightPixel(16.8),
