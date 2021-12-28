@@ -10,6 +10,7 @@ import LatestArticles from './LatestArticles';
 import SharePostModal from './SharePostModal';
 import Options from './Options';
 import NewPost from './NewPost';
+import SafeAreaView from 'react-native-safe-area-view';
 
 const Home = () => {
   const offset = useRef(new Animated.Value(0)).current;
@@ -20,7 +21,6 @@ const Home = () => {
   const [newPost, setNewPost] = useState(false);
 
   const onClickShare = () => {
-    a;
     setShowShareModal(!showShareModal);
   };
 
@@ -52,7 +52,7 @@ const Home = () => {
   };
 
   return (
-    <>
+    <SafeAreaView>
       <SharePostModal
         visible={showShareModal}
         hideModal={() => {
@@ -115,7 +115,7 @@ const Home = () => {
         }}
         newPost={newPost}
       />
-    </>
+    </SafeAreaView>
   );
 };
 
