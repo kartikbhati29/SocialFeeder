@@ -41,7 +41,7 @@ const SharePostModal = ({ visible, hideModal }) => {
             resizeMode={'contain'}
             style={{ marginRight: widthPixel(10) }}
           />
-          <Text syle={styles.shareText}>Send as a private message</Text>
+          <Text style={styles.shareText}>Send as a private message</Text>
         </View>
         <View style={styles.shareContainer}>
           <Image
@@ -49,7 +49,7 @@ const SharePostModal = ({ visible, hideModal }) => {
             resizeMode={'contain'}
             style={{ marginRight: widthPixel(10) }}
           />
-          <Text syle={styles.shareText}>Share as a post</Text>
+          <Text style={styles.shareText}>Share as a post</Text>
         </View>
         <View style={styles.divider}></View>
         <View style={styles.shareContainer}>
@@ -58,7 +58,7 @@ const SharePostModal = ({ visible, hideModal }) => {
             resizeMode={'contain'}
             style={{ marginRight: widthPixel(10) }}
           />
-          <Text syle={styles.shareText}>Share on Facebook</Text>
+          <Text style={styles.shareText}>Share on Facebook</Text>
         </View>
         <View style={styles.shareContainer}>
           <Image
@@ -66,7 +66,7 @@ const SharePostModal = ({ visible, hideModal }) => {
             resizeMode={'contain'}
             style={{ marginRight: widthPixel(10) }}
           />
-          <Text syle={styles.shareText}>Send via WhatsApp</Text>
+          <Text style={styles.shareText}>Send via WhatsApp</Text>
         </View>
       </View>
     </Modal>

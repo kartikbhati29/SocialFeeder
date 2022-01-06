@@ -59,9 +59,11 @@ const HomeHeader = ({ animatedValue }) => {
         <View style={[styles.middleContainer]}>
           <View style={styles.leftBox}>
             <TextInput
-              style={{ flex: 1 }}
+              style={{ flex: 1, color: 'black' }}
               placeholderTextColor="#A5B1C2"
               placeholder={'Search posts and members'}
+              fontSize={12}
+              height={34}
             />
             <View>
               <Image
@@ -103,7 +105,6 @@ const styles = StyleSheet.create({
   wrapperContainer: {
     paddingVertical: heightPixel(10),
     backgroundColor: '#FFFFFF',
-    marginBottom: heightPixel(10),
     width: widthPixel(360),
   },
   container: {

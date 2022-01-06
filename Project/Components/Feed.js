@@ -61,6 +61,7 @@ const Feed = ({ data, onClickShare, onClickOptions, feedUpdated }) => {
               onPress={() => {
                 onClickOptions();
               }}
+              style={{ width: 10 }}
             >
               <Image
                 source={require('../assets/images/threeDots.png')}
