@@ -19,15 +19,17 @@ import { store } from './store/store';
 import { Provider } from 'react-redux';
 
 import Home from './Components/Home';
+import ZapKey from './Components/Zapkey';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const App = () => {
   return (
     <Provider store={store}>
       <SafeAreaProvider>
-        <Home />
+        {/* <Home /> */}
+        <ZapKey />
       </SafeAreaProvider>
-    </Provider>  
+    </Provider>
   );
 };
 
